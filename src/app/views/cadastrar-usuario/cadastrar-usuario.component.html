@@ -1,1 +1,14 @@
-<p>cadastrar-usuario works!</p>
+<div id="login-container">
+    <div class="login-form">
+        <h1>Cadastre-se</h1>
+        <button (click)="signInGoogle()">
+            <img src="assets/icons/google.svg" alt="Logo Google">
+        </button>
+        <form [formGroup]="formCadastro">
+            <input type="email" placeholder="E-mail" formControlName="email">
+            <input type="password" placeholder="Senha" formControlName="senha">
+            <button type="submit" (click)="createUserEmailAndPassword()">Cadastrar</button>
+        </form>
+        <span><a routerLink="/login">Voltar para Login</a></span>
+    </div>
+</div>
