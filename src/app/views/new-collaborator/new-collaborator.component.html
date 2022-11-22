@@ -1,0 +1,64 @@
+<app-header></app-header>
+<div class="container">
+    <h1>Novo colaborador</h1>
+    <form>
+        <mat-form-field class="full-width" appearance="outline">
+            <mat-label>Nome</mat-label>
+            <input type="text" matInput placeholder="Nome">
+        </mat-form-field>
+
+        <div class="double-width">
+            <mat-form-field class="full-width" appearance="outline">
+                <mat-label>CPF</mat-label>
+                <input type="text" matInput placeholder="CPF">
+            </mat-form-field>
+    
+            <mat-form-field class="full-width" appearance="outline">
+                <mat-label>Data de Nascimento</mat-label>
+                <input type="date" matInput placeholder="Data de Nascimento">
+            </mat-form-field>
+        </div>
+
+        <div class="double-width">
+            <mat-form-field class="full-width" appearance="outline">
+                <mat-label>Cargo</mat-label>
+                <input type="text" matInput placeholder="Cargo">
+            </mat-form-field>
+    
+            <mat-form-field class="full-width" appearance="outline">
+                <mat-label>Setor</mat-label>
+                <input type="text" matInput placeholder="Setor">
+            </mat-form-field>
+        </div>
+
+        <div class="double-width">
+            <mat-form-field class="full-width" appearance="outline">
+                <mat-label>Estado</mat-label>
+                <input type="text" matInput placeholder="Estado">
+            </mat-form-field>
+    
+            <mat-form-field class="full-width" appearance="outline">
+                <mat-label>Cidade</mat-label>
+                <input type="text" matInput placeholder="Cidade">
+            </mat-form-field>
+        </div>
+
+        <mat-form-field class="full-width" appearance="outline">
+            <mat-label>Remuneração (R$)</mat-label>
+            <input type="number" matInput placeholder="Remuneração (R$)">
+        </mat-form-field>
+
+        <mat-form-field class="full-width" appearance="outline">
+            <mat-label>E-mail</mat-label>
+            <input type="email" matInput placeholder="E-mail">
+        </mat-form-field>
+
+        <label for="foto">Selecione uma foto</label>
+        <input type="file">
+
+        <div class="double-width">
+            <button class="full-width btn-submit" mat-raised-button>Cadastrar</button>
+            <button class="full-width btn-close" mat-raised-button>Cancelar</button>
+        </div>
+    </form>
+</div>

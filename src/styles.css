@@ -6,3 +6,9 @@
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.container {
+    width: clamp(300px, 90%, 1400px);
+    margin: 0 auto;
+    padding-top: 90px;
+}
