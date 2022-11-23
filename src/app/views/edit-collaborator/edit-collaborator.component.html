@@ -1,63 +1,63 @@
 <app-header></app-header>
 <div class="container">
-    <h1>Novo colaborador</h1>
-    <form [formGroup]="formCollaborator">
+    <h1>Editar colaborador</h1>
+    <form #formEdit="ngForm">
         <mat-form-field class="full-width" appearance="outline">
             <mat-label>Nome</mat-label>
-            <input type="text" matInput placeholder="Nome" formControlName="nome">
+            <input type="text" matInput placeholder="Nome" name="nome" [(ngModel)]="collaborator.nome">
         </mat-form-field>
 
         <div class="double-width">
             <mat-form-field class="full-width" appearance="outline">
                 <mat-label>CPF</mat-label>
-                <input type="text" matInput placeholder="CPF" formControlName="cpf">
+                <input type="text" matInput placeholder="CPF" name="cpf" [(ngModel)]="collaborator.cpf">
             </mat-form-field>
     
             <mat-form-field class="full-width" appearance="outline">
                 <mat-label>Data de Nascimento</mat-label>
-                <input type="date" matInput placeholder="Data de Nascimento" formControlName="dataNascimento">
+                <input type="date" matInput placeholder="Data de Nascimento" name="dataNascimento" [(ngModel)]="collaborator.dataNascimento">
             </mat-form-field>
         </div>
 
         <div class="double-width">
             <mat-form-field class="full-width" appearance="outline">
                 <mat-label>Cargo</mat-label>
-                <input type="text" matInput placeholder="Cargo" formControlName="cargo">
+                <input type="text" matInput placeholder="Cargo" name="cargo" [(ngModel)]="collaborator.cargo">
             </mat-form-field>
     
             <mat-form-field class="full-width" appearance="outline">
                 <mat-label>Setor</mat-label>
-                <input type="text" matInput placeholder="Setor" formControlName="setor">
+                <input type="text" matInput placeholder="Setor" name="setor" [(ngModel)]="collaborator.setor">
             </mat-form-field>
         </div>
 
         <div class="double-width">
             <mat-form-field class="full-width" appearance="outline">
                 <mat-label>Estado</mat-label>
-                <input type="text" matInput placeholder="Estado" formControlName="estado">
+                <input type="text" matInput placeholder="Estado" name="estado" [(ngModel)]="collaborator.estado">
             </mat-form-field>
     
             <mat-form-field class="full-width" appearance="outline">
                 <mat-label>Cidade</mat-label>
-                <input type="text" matInput placeholder="Cidade" formControlName="cidade">
+                <input type="text" matInput placeholder="Cidade" name="cidade" [(ngModel)]="collaborator.cidade">
             </mat-form-field>
         </div>
 
         <mat-form-field class="full-width" appearance="outline">
             <mat-label>Remuneração (R$)</mat-label>
-            <input type="number" matInput placeholder="Remuneração (R$)" formControlName="remuneracao">
+            <input type="number" matInput placeholder="Remuneração (R$)" name="remuneracao" [(ngModel)]="collaborator.remuneracao">
         </mat-form-field>
 
         <mat-form-field class="full-width" appearance="outline">
             <mat-label>E-mail</mat-label>
-            <input type="email" matInput placeholder="E-mail" formControlName="email">
+            <input type="email" matInput placeholder="E-mail" name="email" [(ngModel)]="collaborator.email">
         </mat-form-field>
 
         <label for="foto">Selecione uma foto</label>
         <input type="file">
 
         <div class="double-width">
-            <button class="full-width btn-submit" mat-raised-button (click)="createCollaborator()">Cadastrar</button>
+            <button class="full-width btn-submit" mat-raised-button (click)="updateCollaborator(formEdit)">Editar</button>
             <a class="full-width btn-close" mat-raised-button routerLink="/dashboard">Cancelar</a>
         </div>
     </form>
