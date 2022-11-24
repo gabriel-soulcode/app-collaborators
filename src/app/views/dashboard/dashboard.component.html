@@ -7,7 +7,7 @@
             <ng-container matColumnDef="foto">
                 <th mat-header-cell *matHeaderCellDef> Foto </th>
                 <td mat-cell *matCellDef="let collaborator">
-                    <img class="avatar" src="{{ collaborator.fotoUrl }}" alt="Avatar">
+                    <img class="avatar" src="{{ collaborator.fotoUrl | avatar }}" alt="Avatar">
                 </td>
             </ng-container>
 
@@ -57,7 +57,7 @@
             <ng-container matColumnDef="detalhes">
                 <th mat-header-cell *matHeaderCellDef> Detalhes </th>
                 <td mat-cell *matCellDef="let collaborator">
-                    <button mat-icon-button>
+                    <button mat-icon-button (click)="openDetails(collaborator)">
                         <i class="material-icons">more_horiz</i>
                     </button>
                 </td>

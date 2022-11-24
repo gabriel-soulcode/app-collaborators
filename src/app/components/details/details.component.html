@@ -1,0 +1,18 @@
+
+<div class="dialog-container">
+    <button mat-icon-button mat-dialog-close>
+        <i class="material-icons">close</i>
+    </button>
+
+    <img src="{{collaborator.fotoUrl | avatar}}" alt="Avatar">
+    <h3>{{collaborator.nome}}</h3>
+
+    <span><strong>CPF:</strong> {{collaborator.cpf}}</span>
+    <span><strong>Data de Nascimento:</strong> {{collaborator.dataNascimento}}</span>
+    <span><strong>Cargo:</strong> {{collaborator.cargo}}</span>
+    <span><strong>Setor:</strong> {{collaborator.setor}}</span>
+    <span><strong>Estado:</strong> {{collaborator.estado}}</span>
+    <span><strong>Cidade:</strong> {{collaborator.cidade}}</span>
+    <span><strong>E-mail:</strong> {{collaborator.email}}</span>
+    <span><strong>Remuneração:</strong> R${{collaborator.remuneracao}}</span>
+</div>
