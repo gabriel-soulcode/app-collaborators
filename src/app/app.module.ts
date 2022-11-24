@@ -19,6 +19,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { DashboardComponent } from './views/dashboard/dashboard.component';
 import { NewCollaboratorComponent } from './views/new-collaborator/new-collaborator.component';
 import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
+import { AngularFireStorageModule } from '@angular/fire/compat/storage';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,8 @@ import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
     MaterialModule,
     AngularFirestoreModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
-    AngularFireAuthModule
+    AngularFireAuthModule,
+    AngularFireStorageModule
   ],
   providers: [],
   bootstrap: [AppComponent]

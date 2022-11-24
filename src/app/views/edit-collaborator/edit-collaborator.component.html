@@ -4,57 +4,58 @@
     <form #formEdit="ngForm">
         <mat-form-field class="full-width" appearance="outline">
             <mat-label>Nome</mat-label>
-            <input type="text" matInput placeholder="Nome" name="nome" [(ngModel)]="collaborator.nome">
+            <input type="text" matInput placeholder="Nome" name="nome" [(ngModel)]="collaborator.nome" required>
         </mat-form-field>
 
         <div class="double-width">
             <mat-form-field class="full-width" appearance="outline">
                 <mat-label>CPF</mat-label>
-                <input type="text" matInput placeholder="CPF" name="cpf" [(ngModel)]="collaborator.cpf">
+                <input type="text" matInput placeholder="CPF" name="cpf" [(ngModel)]="collaborator.cpf" required>
             </mat-form-field>
     
             <mat-form-field class="full-width" appearance="outline">
                 <mat-label>Data de Nascimento</mat-label>
-                <input type="date" matInput placeholder="Data de Nascimento" name="dataNascimento" [(ngModel)]="collaborator.dataNascimento">
+                <input type="date" matInput placeholder="Data de Nascimento" name="dataNascimento" [(ngModel)]="collaborator.dataNascimento" required>
             </mat-form-field>
         </div>
 
         <div class="double-width">
             <mat-form-field class="full-width" appearance="outline">
                 <mat-label>Cargo</mat-label>
-                <input type="text" matInput placeholder="Cargo" name="cargo" [(ngModel)]="collaborator.cargo">
+                <input type="text" matInput placeholder="Cargo" name="cargo" [(ngModel)]="collaborator.cargo" required>
             </mat-form-field>
     
             <mat-form-field class="full-width" appearance="outline">
                 <mat-label>Setor</mat-label>
-                <input type="text" matInput placeholder="Setor" name="setor" [(ngModel)]="collaborator.setor">
+                <input type="text" matInput placeholder="Setor" name="setor" [(ngModel)]="collaborator.setor" required>
             </mat-form-field>
         </div>
 
         <div class="double-width">
             <mat-form-field class="full-width" appearance="outline">
                 <mat-label>Estado</mat-label>
-                <input type="text" matInput placeholder="Estado" name="estado" [(ngModel)]="collaborator.estado">
+                <input type="text" matInput placeholder="Estado" name="estado" [(ngModel)]="collaborator.estado" required>
             </mat-form-field>
     
             <mat-form-field class="full-width" appearance="outline">
                 <mat-label>Cidade</mat-label>
-                <input type="text" matInput placeholder="Cidade" name="cidade" [(ngModel)]="collaborator.cidade">
+                <input type="text" matInput placeholder="Cidade" name="cidade" [(ngModel)]="collaborator.cidade" required>
             </mat-form-field>
         </div>
 
         <mat-form-field class="full-width" appearance="outline">
             <mat-label>Remuneração (R$)</mat-label>
-            <input type="number" matInput placeholder="Remuneração (R$)" name="remuneracao" [(ngModel)]="collaborator.remuneracao">
+            <input type="number" matInput placeholder="Remuneração (R$)" name="remuneracao" [(ngModel)]="collaborator.remuneracao" required min="0">
         </mat-form-field>
 
         <mat-form-field class="full-width" appearance="outline">
             <mat-label>E-mail</mat-label>
-            <input type="email" matInput placeholder="E-mail" name="email" [(ngModel)]="collaborator.email">
+            <input type="email" matInput placeholder="E-mail" name="email" [(ngModel)]="collaborator.email" required email>
         </mat-form-field>
 
         <label for="foto">Selecione uma foto</label>
-        <input type="file">
+        <input type="file" class="upload-photo" (change)="uploadFile($event)">
+        <mat-progress-bar mode="indeterminate" *ngIf="isLoadUpload"></mat-progress-bar>
 
         <div class="double-width">
             <button class="full-width btn-submit" mat-raised-button (click)="updateCollaborator(formEdit)">Editar</button>
